@@ -1,0 +1,42 @@
+<%= form_with(model: espetaculo, local: true) do |form| %>
+  <% if espetaculo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(espetaculo.errors.count, "error") %> prohibited this espetaculo from being saved:</h2>
+
+      <ul>
+      <% espetaculo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :espetaculo_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :atores %>
+    <%= form.number_field :atores, id: :espetaculo_atores %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diretor %>
+    <%= form.number_field :diretor, id: :espetaculo_diretor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sonoplasta %>
+    <%= form.number_field :sonoplasta, id: :espetaculo_sonoplasta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iluminador %>
+    <%= form.number_field :iluminador, id: :espetaculo_iluminador %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

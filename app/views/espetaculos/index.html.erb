@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Espetaculos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Atores</th>
+      <th>Diretor</th>
+      <th>Sonoplasta</th>
+      <th>Iluminador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @espetaculos.each do |espetaculo| %>
+      <tr>
+        <td><%= espetaculo.nome %></td>
+        <td><%= espetaculo.atores %></td>
+        <td><%= espetaculo.diretor %></td>
+        <td><%= espetaculo.sonoplasta %></td>
+        <td><%= espetaculo.iluminador %></td>
+        <td><%= link_to 'Show', espetaculo %></td>
+        <td><%= link_to 'Edit', edit_espetaculo_path(espetaculo) %></td>
+        <td><%= link_to 'Destroy', espetaculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Espetaculo', new_espetaculo_path %>

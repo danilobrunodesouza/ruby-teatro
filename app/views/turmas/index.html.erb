@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Turmas da Cia do Nó de Teatro</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Moódulo</th>
+      <th>Horario</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turmas.each do |turma| %>
+      <tr>
+        <td><%= turma.nome %></td>
+        <td><%= turma.modulo %></td>
+        <td><%= turma.horario.strftime("%H:%M") %></td>
+        <td><%= link_to 'Visualizar', turma, class:"btn btn-outline-success" %>
+        <%= link_to 'Editar', edit_turma_path(turma), class:"btn btn-outline-info"  %>
+        <%= link_to 'Deletar', turma, method: :delete, class:"btn btn-outline-danger" , data: { confirm: "#{current_user.name}, você tem certeza que deseja deletar a turma #{turma.nome}?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<center><%= link_to 'Adicionar Nova Turma', new_turma_path, class:"btn btn-primary" %></center>

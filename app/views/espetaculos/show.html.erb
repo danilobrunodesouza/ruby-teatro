@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @espetaculo.nome %>
+</p>
+
+<p>
+  <strong>Atores:</strong>
+  <%= @espetaculo.atores %>
+</p>
+
+<p>
+  <strong>Diretor:</strong>
+  <%= @espetaculo.diretor %>
+</p>
+
+<p>
+  <strong>Sonoplasta:</strong>
+  <%= @espetaculo.sonoplasta %>
+</p>
+
+<p>
+  <strong>Iluminador:</strong>
+  <%= @espetaculo.iluminador %>
+</p>
+
+<%= link_to 'Edit', edit_espetaculo_path(@espetaculo) %> |
+<%= link_to 'Back', espetaculos_path %>

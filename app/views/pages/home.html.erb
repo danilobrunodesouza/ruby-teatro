@@ -1,0 +1,13 @@
+<div class="jumbotron">
+    <% if user_signed_in? %>
+        <h1 class="display-3">Olá, <%= current_user.name %></h1>
+    <% else %>
+        <h1 class="display-3">Olá!</h1>
+    <% end %>
+  <p class="lead">Seja bem-vindo ao sistema da Cia do Nó de Teatro.</p>
+  <hr class="my-4">
+  <p>Aqui você pode administrar a Cia. Artístico, pedagógico e difusão</p>
+  <p class="lead">
+    <%= link_to "Cadastre-se", root_path, class:"btn btn-primary" %>
+  </p>
+</div>

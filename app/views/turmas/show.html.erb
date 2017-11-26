@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+    <div class="col-4">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title"><strong>Turma: </strong><%= @turma.nome %></h4>
+            <h5 class="card-text"><strong>Modulo: </strong><%= @turma.modulo %></h5>
+            <p class="card-text"><strong>Horario: </strong><%= @turma.horario.strftime("%H:%M") %></p>  
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-8">
+        <div class="card">
+          <div class="card-body">
+          
+              <div class="card">
+                  <div class="card-body">
+                  </div>     
+              </div>   
+            
+          </div>     
+        </div>    
+    </div>
+
+</div>
+
+  
+<%= link_to 'Edit', edit_turma_path(@turma) %> |
+<%= link_to 'Back', turmas_path %>

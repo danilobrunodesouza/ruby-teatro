@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dia:</strong>
+  <%= @registro.dia %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @registro.titulo %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @registro.descricao %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @registro.tipo %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @registro.valor %>
+</p>
+
+<%= link_to 'Edit', edit_registro_path(@registro) %> |
+<%= link_to 'Back', registros_path %>

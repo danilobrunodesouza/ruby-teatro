@@ -1,0 +1,43 @@
+
+<%= form_with(model: registro, local: true) do |form| %>
+  <% if registro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(registro.errors.count, "error") %> prohibited this registro from being saved:</h2>
+
+      <ul>
+      <% registro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dia %>
+    <%= form.date_select :dia, id: :registro_dia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.select :titulo, Registro.titulos.keys %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao, id: :registro_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.select :tipo, Registro.tipos.keys %>
+</div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.text_field :valor, id: :registro_valor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

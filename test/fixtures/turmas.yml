@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  modulo: 1
+  horario: 2017-11-24 22:05:42
+
+two:
+  nome: MyString
+  modulo: 1
+  horario: 2017-11-24 22:05:42

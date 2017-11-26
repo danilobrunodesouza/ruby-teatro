@@ -1,0 +1,36 @@
+<%= form_with(model: turma, local: true) do |form| %>
+  <% if turma.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(turma.errors.count, "error") %> prohibited this turma from being saved:</h2>
+
+      <ul>
+      <% turma.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :turma_nome, class:"form-control" %>
+  </div>
+    
+  <div class="row">
+
+      <div class="col-6">
+          <div class="form-group">
+            <%= form.label :modulo %>
+            <%= form.select :modulo, Turma.modulos.keys, class:"form-control custom-select" %>
+          </div>
+      </div>    
+      <div class="col-6">
+          <div class="form-group">
+            <%= form.label :horario %>
+            <%= form.time_select :horario, id: :turma_horario, class:"form-control"  %>
+          </div>
+      </div>    
+
+  </div>    
+    <%= form.submit "Cadastrar", class:"btn btn-primary" %>
+    
+<% end %>

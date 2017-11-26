@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  atores: 1
+  diretor: 1
+  sonoplasta: 1
+  iluminador: 1
+
+two:
+  nome: MyString
+  atores: 1
+  diretor: 1
+  sonoplasta: 1
+  iluminador: 1
