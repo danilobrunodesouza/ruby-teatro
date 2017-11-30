@@ -9,7 +9,8 @@ end
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails' 
 gem 'devise'
-
+gem 'rails_admin', '~> 1.2'
+gem 'bcrypt', platforms: :ruby
 
 
 gem "coffee-script-source", "1.8.0"
@@ -50,6 +51,8 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem "better_errors"
+  gem "binding_of_caller"
   gem 'web-console', '>= 3.3.0'
 end
 
